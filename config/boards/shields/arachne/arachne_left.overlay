@@ -3,25 +3,25 @@
 / {
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
-        diode-direction = "col2row"; 
+        diode-direction = "col2row"; // Change to "row2col" if diodes point toward columns
 
-        // Rows (5): P19, P18, P09, P08, P07
+        // Rows (0 to 4)
         row-gpios
-            = <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // P19
-            , <&gpio0  2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // P18
-            , <&gpio0  9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // P09
-            , <&gpio1  0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // P08
-            , <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // P07
+            = <&gpio0  2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Row 0: P19 / P0.02
+            , <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Row 1: P18 / P1.15
+            , <&gpio1  6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Row 2: P09 / P1.06
+            , <&gpio1  4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Row 3: P08 / P1.04
+            , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Row 4: P07 / P0.11
             ;
 
-        // Cols (6): P10, P16, P14, P15, P20, P21
+        // Columns (0 to 5)
         col-gpios
-            = <&gpio0 10 GPIO_ACTIVE_HIGH>  // P10
-            , <&gpio1 11 GPIO_ACTIVE_HIGH>  // P16
-            , <&gpio1 13 GPIO_ACTIVE_HIGH>  // P14
-            , <&gpio1 15 GPIO_ACTIVE_HIGH>  // P15
-            , <&gpio0 28 GPIO_ACTIVE_HIGH>  // P20
-            , <&gpio0 31 GPIO_ACTIVE_HIGH>  // P21
+            = <&gpio0  9 GPIO_ACTIVE_HIGH>  // Col 0: P10 / P0.09
+            , <&gpio0 10 GPIO_ACTIVE_HIGH>  // Col 1: P16 / P0.10
+            , <&gpio1 11 GPIO_ACTIVE_HIGH>  // Col 2: P14 / P1.11
+            , <&gpio1 13 GPIO_ACTIVE_HIGH>  // Col 3: P15 / P1.13
+            , <&gpio0 29 GPIO_ACTIVE_HIGH>  // Col 4: P20 / P0.29
+            , <&gpio0 31 GPIO_ACTIVE_HIGH>  // Col 5: P21 / P0.31
             ;
     };
 };
