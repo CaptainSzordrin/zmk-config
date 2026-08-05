@@ -1,7 +1,7 @@
-if SHIELD_CALDERA_LEFT || SHIELD_CALDERA_RIGHT
+if SHIELD_ARACHNE_LEFT || SHIELD_ARACHNE_RIGHT
 
 config ZMK_KEYBOARD_NAME
-    default "Caldera"
+    default "Arachne"
 
 config ZMK_SPLIT
     default y
