@@ -19,7 +19,7 @@
 #
 ---
 include:
-  - board: supermini_nrf52840
+  - board: board: nice_nano_v2
     shield: arachne_left
-  - board: supermini_nrf52840
+  - board: board: nice_nano_v2
     shield: arachne_right
