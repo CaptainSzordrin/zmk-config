@@ -1,0 +1,27 @@
+#include "arachne.dtsi"
+
+/ {
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row"; 
+
+        // Rows (5): P19, P18, P09, P08, P07
+        row-gpios
+            = <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // P19
+            , <&gpio0  2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // P18
+            , <&gpio0  9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // P09
+            , <&gpio1  0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // P08
+            , <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // P07
+            ;
+
+        // Cols (6): P10, P16, P14, P15, P20, P21
+        col-gpios
+            = <&gpio0 10 GPIO_ACTIVE_HIGH>  // P10
+            , <&gpio1 11 GPIO_ACTIVE_HIGH>  // P16
+            , <&gpio1 13 GPIO_ACTIVE_HIGH>  // P14
+            , <&gpio1 15 GPIO_ACTIVE_HIGH>  // P15
+            , <&gpio0 28 GPIO_ACTIVE_HIGH>  // P20
+            , <&gpio0 31 GPIO_ACTIVE_HIGH>  // P21
+            ;
+    };
+};
