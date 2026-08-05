@@ -1,0 +1,5 @@
+config SHIELD_ARACHNE_LEFT
+    def_bool $(shields_list_contains,arachne_left)
+
+config SHIELD_ARACHNE_RIGHT
+    def_bool $(shields_list_contains,arachne_right)

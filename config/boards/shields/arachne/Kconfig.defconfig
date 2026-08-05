@@ -1,0 +1,9 @@
+if SHIELD_ARACHNE_LEFT || SHIELD_ARACHNE_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "Arachne"
+
+config ZMK_SPLIT
+    default y
+
+endif
