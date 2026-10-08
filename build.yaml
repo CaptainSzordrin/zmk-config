@@ -23,3 +23,5 @@ include:
     shield: arachne_left
   - board: nice_nano_v2
     shield: arachne_right
+  - board: nice_nano_v2
+    shield: settings_reset
