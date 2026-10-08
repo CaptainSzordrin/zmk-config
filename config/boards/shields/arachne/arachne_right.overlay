@@ -1,13 +1,11 @@
 #include "arachne.dtsi"
 
 
-&default_transform { 
-    col-offset = <6>;
-    row-offset = <5>;
-};
+
 
 &kscan0 {
      row-gpios
+      row-offset = <5>;
         = <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -15,6 +13,7 @@
         , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         ;
     col-gpios
+     col-offset = <6>;
         = <&pro_micro 21 GPIO_ACTIVE_HIGH>
         , <&pro_micro 20 GPIO_ACTIVE_HIGH>
         , <&pro_micro 15 GPIO_ACTIVE_HIGH>
